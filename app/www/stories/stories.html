@@ -1,0 +1,56 @@
+<link rel="icon" type="image/icon" href="favicon.ico">
+
+<div layout="row" flex="100" layout-align="center">
+
+
+    <div layout="column" class="backgroundGray circle" flex="70" layout-align="center">
+        <!--<div flex="90" >-->
+
+        <!--class="image backgroundGrayImg circle padAround centerT"-->
+        <div ng-repeat="genre in genres" ng-if="genre.genre"
+             class="backgroundGrayImg circle padAround centerT">
+
+            <ul rn-carousel rn-carousel-auto-slide
+                rn-carousel-pause-on-hover
+                style="height:500px" rn-carousel-index="slideIndex2">
+                <div layout="row" flex="60"></div>
+                <!--<h4>{{genre}}</h4>-->
+                <h1 class="circle" style="background-color:black;">
+                    {{genre.genre}}</h1>
+
+
+                <li ng-repeat="story in genre.stories" ng-if="story&&story.title">
+                    <!--<div flex="100" >-->
+                    <div class="padAround highlight2 circle centerT"  layout-align="center">
+                        <!--<div layout="row">-->
+                            <!--<div layout="column" flex="100" layout-align="center" style="text-align:center;">-->
+                                <!--<h1><a href="Documents/Stories pdf/Gun Shots.pdf">{{story.title}}</a></h1>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <div layout="row" layout-align="center"  layout-align="center">
+                            <div layout="column" flex="60">
+                                <p>Summary: {{story.summary}}</p>
+                            </div>
+                            <div layout="column" flex="40" layout-align="center">
+                                <h1><a href="Documents/Stories pdf/Gun Shots.pdf">{{story.title}}</a></h1>
+                                <img ng-src="{{story.img}}" class="snippet">
+                            </div>
+                        </div>
+                    </div>
+                    <!--</div>-->
+
+                </li>
+            </ul>
+
+            <div class="thumbs" flex="90">
+                <div class="thumb ng-scope" ng-repeat="story in genre.stories"
+                     ng-click="$parent.slideIndex2=$index"
+                     ng-class="{'is-active': ($parent.slideIndex2==$index)}"
+                     style="background-image: url('/www/img/yinyang_small.png');">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

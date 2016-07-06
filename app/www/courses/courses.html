@@ -1,0 +1,12 @@
+<div class="center bodyWidth backgroundGray circle">
+
+    <div ng-repeat="year in years" class="backgroundGrayImg circle padAround centerT">
+        <h1>{{year.year}}</h1>
+        <div ng-repeat="season in year.seasons">
+            <h1>{{season.season}}</h1>
+            <p ng-repeat="course in season.courses">
+                {{course.courseName}}
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<link type="text/css" rel="stylesheet" href="css/combined.min.css">
+
+<script src="js/combined.min.js"></script>
+<!--
+<script src="js/main.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+-->
+
+<div layout="row" flex="100" layout-align="center">
+
+    <div layout="column" class="backgroundGray circle" flex="70" layout-align="center">
+        <div class="backgroundGrayImg circle padAround centerT">
+            <h3>Projects that I have helped develop. Links that are <span class="notcs">this color </span> are not
+                really related to Computer Science and are more for entertainment.</h3>
+        </div>
+
+
+        <div ng-repeat="type in types"
+             class="backgroundGrayImg circle padAround centerT">
+            <ul rn-carousel rn-carousel-auto-slide
+                rn-carousel-pause-on-hover style="height:500px;"
+                 rn-carousel-index="slideIndex2"  >
+                <!--<div layout="row" flex="60"></div>-->
+                <!--<h4>{{genre}}</h4>-->
+                <h1 class="circle" style="background-color:black;">
+                    {{type.type}}</h1>
+
+                <li ng-repeat="project in type.projects" >
+                    <div class="layer padAround highlight2 circle centerT" layout="column" >
+                        <div layout="row" >
+                            <div layout="column" flex="60">
+                                <h2 >
+                                    <a ng-href="project.url">{{project.title}}</a>
+                                </h2>
+                                <p>{{project.time}}</p>
+                                <p><span ng-bind-html="$sce.trustAsHtml(project.summary)"></span></p>
+                                <p>{{project.contributors}}</p>
+
+
+                                <!--<iframe class="snippet" ng-src="{{project.img | trustAsResourceUrl}}"-->
+                                        <!--ng-if="project.img && !project.isImg"></iframe>-->
+                                <!--<p>Summary: {{story.summary}}</p>-->
+                            </div>
+                            <div layout="column" flex="40" layout-align="center">
+                                <img class="snippet" ng-src="{{project.img | trustAsResourceUrl}}" err-src="www/img/yinyang_small.png" >
+                                <!--<h1><a href="Documents/Stories pdf/Gun Shots.pdf">{{story.title}}</a></h1>-->
+                                <!--<img ng-src="{{story.img}}" class="center" style="width:150px;height:150px;">-->
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="thumbs" flex="90">
+                <img class="thumb ng-scope" ng-repeat="project in type.projects"
+                     ng-click="$parent.slideIndex2=$index"
+                     ng-class="{'is-active': ($parent.slideIndex2==$index)}"
+
+                     ng-src="{{project.img}}"
+                     err-src="www/img/yinyang_small.png">
+                    <!--<img >-->
+                    <!--<p>-->
+                    <!--{{project.title}}-->
+                    <!--</p>-->
+                </img>
+            </div>
+        </div>
+
+        <!--<div class="backgroundGrayImg circle padAround centerT" ng-repeat="type in types">-->
+            <!--<h1 class="circle" style="background-color:black;">Websites</h1>-->
+            <!--<div class="highlight2 padAround circle" ng-repeat="project in type.projects">-->
+
+                <!--<h2 style="margin-top:3%;">-->
+                    <!--<a ng-href="project.url">{{project.title}}</a>-->
+                    <!--&lt;!&ndash;<a href="http://www.SmartDocFinder.com/UCR">SmartDocFinder</a>&ndash;&gt;-->
+                <!--</h2>-->
+                <!--<p>{{project.time}}</p>-->
+                <!--<p><span ng-bind-html="$sce.trustAsHtml(project.summary)"></span></p>-->
+                <!--<p>{{project.contributors}}</p>-->
+
+                <!--<img class="snippet" ng-src="{{project.img | trustAsResourceUrl}}" ng-if="project.isImg">-->
+                <!--<iframe class="snippet" ng-src="{{project.img | trustAsResourceUrl}}"-->
+                        <!--ng-if="project.img && !project.isImg"></iframe>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
