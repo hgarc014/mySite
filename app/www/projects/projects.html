@@ -1,12 +1,12 @@
-<link type="text/css" rel="stylesheet" href="css/combined.min.css">
+<!--<link type="text/css" rel="stylesheet" href="css/combined.min.css">-->
 
-<script src="js/combined.min.js"></script>
+<!--<script src="js/combined.min.js"></script>-->
 <!--
 <script src="js/main.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 -->
 
-<div layout="row" flex="100" layout-align="center">
+<div layout="row" flex="100" layout-align="center" layout-fill>
 
     <div layout="column" class="backgroundGray circle" flex="70" layout-align="center">
         <div class="backgroundGrayImg circle padAround centerT">
@@ -18,19 +18,19 @@
         <div ng-repeat="type in types"
              class="backgroundGrayImg circle padAround centerT">
             <ul rn-carousel rn-carousel-auto-slide
-                rn-carousel-pause-on-hover style="height:500px;"
+                rn-carousel-pause-on-hover style="height:450px;"
                  rn-carousel-index="slideIndex2"  >
                 <!--<div layout="row" flex="60"></div>-->
                 <!--<h4>{{genre}}</h4>-->
                 <h1 class="circle" style="background-color:black;">
                     {{type.type}}</h1>
 
-                <li ng-repeat="project in type.projects" >
-                    <div class="layer padAround highlight2 circle centerT" layout="column" >
-                        <div layout="row" >
+                <li ng-repeat="project in type.projects">
+                    <div class="layer padAround centerT " layout="column" >
+                        <div layout="row" class="circle highlight2">
                             <div layout="column" flex="60">
                                 <h2 >
-                                    <a ng-href="project.url">{{project.title}}</a>
+                                    <a ng-href="{{project.url}}" target="_blank">{{project.title}}</a>
                                 </h2>
                                 <p>{{project.time}}</p>
                                 <p><span ng-bind-html="$sce.trustAsHtml(project.summary)"></span></p>
@@ -41,7 +41,7 @@
                                         <!--ng-if="project.img && !project.isImg"></iframe>-->
                                 <!--<p>Summary: {{story.summary}}</p>-->
                             </div>
-                            <div layout="column" flex="40" layout-align="center">
+                            <div layout="column" flex="40" layout-align="center center">
                                 <img class="snippet" ng-src="{{project.img | trustAsResourceUrl}}" err-src="www/img/yinyang_small.png" >
                                 <!--<h1><a href="Documents/Stories pdf/Gun Shots.pdf">{{story.title}}</a></h1>-->
                                 <!--<img ng-src="{{story.img}}" class="center" style="width:150px;height:150px;">-->

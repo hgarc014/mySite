@@ -6,6 +6,7 @@
     <div layout="column" class="backgroundGray circle" flex="70" layout-align="center">
         <!--<div flex="90" >-->
 
+
         <!--class="image backgroundGrayImg circle padAround centerT"-->
         <div ng-repeat="genre in genres" ng-if="genre.genre"
              class="backgroundGrayImg circle padAround centerT">
@@ -21,19 +22,23 @@
 
                 <li ng-repeat="story in genre.stories" ng-if="story&&story.title">
                     <!--<div flex="100" >-->
-                    <div class="padAround highlight2 circle centerT"  layout-align="center">
+                    <!--<div class="padAround highlight2 circle centerT"  layout-align="center">-->
+                    <div class="layer padAround centerT" layout="column">
                         <!--<div layout="row">-->
-                            <!--<div layout="column" flex="100" layout-align="center" style="text-align:center;">-->
-                                <!--<h1><a href="Documents/Stories pdf/Gun Shots.pdf">{{story.title}}</a></h1>-->
-                            <!--</div>-->
+                        <!--<div layout="column" flex="100" layout-align="center" style="text-align:center;">-->
+                        <!--<h1><a href="Documents/Stories pdf/Gun Shots.pdf">{{story.title}}</a></h1>-->
+                        <!--</div>-->
                         <!--</div>-->
 
-                        <div layout="row" layout-align="center"  layout-align="center">
+                        <div layout="row" class="circle highlight2">
+                            <!--<div layout="row" layout-align="center"  layout-align="center">-->
                             <div layout="column" flex="60">
-                                <p>Summary: {{story.summary}}</p>
+                                <ul>
+                                    <p>Summary: {{story.summary}}</p>
+                                </ul>
                             </div>
-                            <div layout="column" flex="40" layout-align="center">
-                                <h1><a href="Documents/Stories pdf/Gun Shots.pdf">{{story.title}}</a></h1>
+                            <div layout="column" flex="50" layout-align="center center">
+                                <h1><a ng-href="{{story.link}}" target="_blank">{{story.title}}</a></h1>
                                 <img ng-src="{{story.img}}" class="snippet">
                             </div>
                         </div>
@@ -54,3 +59,4 @@
         </div>
     </div>
 </div>
+
