@@ -1,0 +1,28 @@
+<div>
+
+
+    <md-button ng-repeat="page in navPages"
+               ng-class="{ 'selectedBckColor': $index == selectedIndex }"
+               class="defaultTxtColor"
+               ng-click="updatePage($index)">
+        {{page.name}}
+    </md-button>
+    <!--<md-button ><a is-active-nav href="/#/main">Home</a></md-button>-->
+    <!--<md-button ng-click="updatePage('stories')">Stories</md-button>-->
+    <!--<md-button>Item 2</md-button>-->
+    <!--<md-menu>-->
+    <!--<md-button md-menu-origin ng-click="$mdOpenMenu()">Help</md-button>-->
+    <!--<md-menu-content width="2">-->
+    <!--<md-menu-item>-->
+    <!--<md-button>Help</md-button>-->
+    <!--</md-menu-item>-->
+    <!--<md-menu-item>-->
+    <!--<md-button>About</md-button>-->
+    <!--</md-menu-item>-->
+    <!--</md-menu-content>-->
+    <!--</md-menu>-->
+</div>
+<!--<div class="nav-buttons">-->
+<!--<md-button class="md-raised md-accent">My profile</md-button>-->
+<!--<md-button class="md-raised md-warn">Log Out</md-button>-->
+<!--</div>-->

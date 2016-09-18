@@ -99,32 +99,75 @@ angular.module('myApp.projects', ['ngRoute'])
         }
 
         // listHeader("Websites");
-        addProject("Websites", "SmartDocFinder", "http://www.SmartDocFinder.com/UCR", "same", "Matthew Wiley, Michael Brevard, Ryan Rivas, Henry Garcia", "SmartDocFinder is a data-driven patient-centric service to match patients to healthcare providers, which achieves increased patient satisfaction and reduced healthcare costs.", "Developing", "");
-        addProject("Websites", "TweetSearcher", "http://tweetsearcher-programhenry.rhcloud.com/TweetSearcher/TweetSearcher.html", "same", "Nicolas Lawler, Henry Garcia", "A simple tweet search engine that uses Lucene. Currently the site is hosted by a free service so it can be found offline occasionally. Tweets are fetched periodically and emptied every few days.", "Developed in 2015", "");
-        addProject("Websites", "League Information", "http://programhenry.com/theleague/index.html", "same", "Henry", "A website I created for a class project. It describes some basic things about the game <a href=\"http://na.leagueoflegends.com\">League of Legends</a>", "Developed in 2012", "");
+        addProject("Websites", "SmartDocFinder", "http://www.SmartDocFinder.com/UCR", "www/img/SDF.png",
+            "<a target='_blank' href=\"https://www.linkedin.com/company/10686652?trk=vsrp_companies_res_name&trkInfo=VSRPsearchId%3A3411264871474157431642%2CVSRPtargetId%3A10686652%2CVSRPcmpt%3Aprimary\">SmartDocFinder team</a>",
+            "SmartDocFinder is a data-driven patient-centric service to match patients to healthcare providers, " +
+            "which achieves increased patient satisfaction and reduced healthcare costs.",
+            "Developing", "");
+        addProject("Websites", "TweetSearcher", "http://tweetsearcher-programhenry.rhcloud.com/TweetSearcher/TweetSearcher.html",
+            "www/img/TweetSearcher.png", "Nicolas Lawler, Henry Garcia", "A simple tweet search engine that uses Lucene. " +
+            "Currently the site is hosted by a free service so it can be found offline occasionally. " +
+            "Tweets are fetched periodically and emptied every few days.",
+            "Developed in 2015", "");
+        addProject("Websites", "League Information", "http://programhenry.com/theleague/index.html", "www/img/League.png", "Henry",
+            "A website I created for a class project. It describes some basic things about the game <a href=\"http://na.leagueoflegends.com\">League of Legends</a>",
+            "Developed in 2012", "");
         // listHeaderClose();
 
         // listHeader();
-        addProject("Software", "passwordCracker", "https://github.com/hgarc014/passwordCracker", "http://programhenry.com/Pictures/passwordCracker.png", "Henry Garcia", "A basic multi-threaded brute force password cracker written in c/c++.  ", "Developed in 2015", "");
-        addProject("Software", "twitter", "https://github.com/hgarc014/twitter", "http://programhenry.com/Pictures/twitter_terminal.png", "Henry Garcia", "A basic terminal version of twitter with real time updates. written in python. ", "Developed in 2015", "");
-        addProject("Software", "rshell", "https://github.com/hgarc014/rshell", "", "Henry Garcia", "A basic terminal based on bash, developed using c/c++ and helped tested with bash.", "Developed in 2014", "");
+        addProject("Software", "passwordCracker", "https://github.com/hgarc014/passwordCracker", "www/img/passwordCracker.png",
+            "Henry Garcia", "A basic multi-threaded brute force password cracker written in c/c++.  ",
+            "Developed in 2015", "");
+        addProject("Software", "twitter", "https://github.com/hgarc014/twitter", "www/img/twitter_terminal.png",
+            "Henry Garcia", "A basic terminal version of twitter with real time updates. written in python. ",
+            "Developed in 2015", "");
+        addProject("Software", "rshell", "https://github.com/hgarc014/rshell", "", "Henry Garcia",
+            "A basic terminal based on bash, developed using c/c++ and helped tested with bash.",
+            "Developed in 2014", "");
         // listHeaderClose();
 
         // listHeader();
-        addProject("Games", "DodgeBall", "https://www.youtube.com/watch?v=1tNON1eCtzk", "https://www.youtube.com/embed/1tNON1eCtzk", "Henry Garcia", "An embedded system game I created using an atmega1284 chip and some other componenets. The goal is to dodge the balls that keep coming toward you.", "Developed in 2015", "");
-        addProject("Games", "git-game-v2", "https://github.com/git-game/git-game-v2", "", "Calvin Kwan, John Dixon, Juan Ruelas, Henry Garcia", "A sequel to git-game that tests your skills on harder github commands.", "Developed in 2015", "");
-        addProject("Games", "git-game", "https://github.com/git-game/git-game", "", "Daniel Rameriez, Henry Garcia", "A terminal based game that tests your skills on github (a version control system). You can see all versions of git-game <a href=\"https://github.com/git-game\"> here </a>", "Developed in 2014", "");
-        addProject("Games", "Adventures of Brady", "/Adventures of Brady.zip", "", "Rodrigo Aguayo, Henry Garcia", "A game created using <a href=\"http://www.yoyogames.com/studio\">GameMaker</a>. You play as Mr. Brady and have to kill the zombie leader in order to save the world from the zombie apocalypse.", "Developed in 2013", "");
-        addProject("Games", "Hangman (windows terminal)", "/Hangman.zip", "", "Henry Garcia", "A terminal based hang man game.", "Developed in 2013");
-        addProject("Games", "Platform", "/Platform.zip", "", "Henry Garcia", "A platforming game that involves the main character as a rectangle. He neeeds to get to the exit. This game was made with <a href=\"http://www.yoyogames.com/studio\">GameMaker</a>.", "Developed in 2010", "");
+        addProject("Games", "DodgeBall", "https://www.youtube.com/watch?v=1tNON1eCtzk", "https://www.youtube.com/embed/1tNON1eCtzk",
+            "Henry Garcia", "An embedded system game I created using an atmega1284 chip and some other componenets. " +
+            "The goal is to dodge the balls that keep coming toward you.",
+            "Developed in 2015", "");
+        addProject("Games", "git-game-v2", "https://github.com/git-game/git-game-v2", "", "Calvin Kwan, John Dixon, Juan Ruelas, Henry Garcia",
+            "A sequel to git-game that tests your skills on harder github commands.",
+            "Developed in 2015", "");
+        addProject("Games", "git-game", "https://github.com/git-game/git-game", "", "Daniel Rameriez, Henry Garcia",
+            "A terminal based game that tests your skills on github (a version control system). " +
+            "You can see all versions of git-game <a href=\"https://github.com/git-game\"> here </a>",
+            "Developed in 2014", "");
+        addProject("Games", "Adventures of Brady", "/Adventures of Brady.zip", "", "Rodrigo Aguayo, Henry Garcia",
+            "A game created using <a href=\"http://www.yoyogames.com/studio\">GameMaker</a>. " +
+            "You play as Mr. Brady and have to kill the zombie leader in order to save the world from the zombie apocalypse.",
+            "Developed in 2013", "");
+        addProject("Games", "Hangman (windows terminal)", "/Hangman.zip", "", "Henry Garcia",
+            "A terminal based hang man game.",
+            "Developed in 2013");
+        addProject("Games", "Platform", "/Platform.zip", "", "Henry Garcia",
+            "A platforming game that involves the main character as a rectangle. He neeeds to get to the exit. " +
+            "This game was made with <a href=\"http://www.yoyogames.com/studio\">GameMaker</a>.",
+            "Developed in 2010", "");
         // listHeaderClose();
 
-        // listHeader(,"notcs");
-        addProject("Videos", "Disco Macbeth", "https://www.youtube.com/watch?v=xrrfrg1JDy0&feature=player_embedded", "https://www.youtube.com/embed/xrrfrg1JDy0", "Mayra, Michael, Yoenai, Rodrigo, Andy, Alberto, Carlos, Henry", "A Scene from Macbeth that we twisted into a dance off.", "Developed in 2013", "notcs");
-        addProject("Videos", "Z.O.M.B.E.E.Z", "https://www.youtube.com/watch?v=ZqzkFYdHkiU", "https://www.youtube.com/embed/ZqzkFYdHkiU", "Rodrigo, Michael, Ramon, Andy, Henry", "A video made to showcase our Adventures of Brady game.", "Developed in 2013", "notcs");
-        addProject("Videos", "Presidential Election", "https://www.youtube.com/watch?v=ErWBcqnp0rg", "https://www.youtube.com/embed/ErWBcqnp0rg", "Rodrigo, Grant, Josh, Jessica, Henry", "A play that we created for an English class in High School.", "Developed in 2011", "notcs");
-        addProject("Videos", "Richards show", "https://www.youtube.com/watch?v=75OIQ8DI_7g", "https://www.youtube.com/embed/75OIQ8DI_7g", "Richard Garcia, David Garcia, Henry Garcia", "A little video that my brother wanted to make when he was young.", "Developed in 2010", "notcs");
-        // listHeaderClose();
+        // // listHeader(,"notcs");
+        // addProject("Videos", "Disco Macbeth", "https://www.youtube.com/watch?v=xrrfrg1JDy0&feature=player_embedded",
+        //     "https://www.youtube.com/embed/xrrfrg1JDy0", "Mayra, Michael, Yoenai, Rodrigo, Andy, Alberto, Carlos, Henry",
+        //     "A Scene from Macbeth that we twisted into a dance off.",
+        //     "Developed in 2013", "notcs");
+        // addProject("Videos", "Z.O.M.B.E.E.Z", "https://www.youtube.com/watch?v=ZqzkFYdHkiU", "https://www.youtube.com/embed/ZqzkFYdHkiU",
+        //     "Rodrigo, Michael, Ramon, Andy, Henry", "A video made to showcase our Adventures of Brady game.",
+        //     "Developed in 2013", "notcs");
+        // addProject("Videos", "Presidential Election", "https://www.youtube.com/watch?v=ErWBcqnp0rg", "https://www.youtube.com/embed/ErWBcqnp0rg",
+        //     "Rodrigo, Grant, Josh, Jessica, Henry",
+        //     "A play that we created for an English class in High School.",
+        //     "Developed in 2011", "notcs");
+        // addProject("Videos", "Richards show", "https://www.youtube.com/watch?v=75OIQ8DI_7g", "https://www.youtube.com/embed/75OIQ8DI_7g",
+        //     "Richard Garcia, David Garcia, Henry Garcia",
+        //     "A little video that my brother wanted to make when he was young.",
+        //     "Developed in 2010", "notcs");
+        // // listHeaderClose();
 
     })
 

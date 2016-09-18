@@ -9,10 +9,10 @@
 <div layout="row" flex="100" layout-align="center" layout-fill>
 
     <div layout="column" class="backgroundGray circle" flex="70" layout-align="center">
-        <div class="backgroundGrayImg circle padAround centerT">
-            <h3>Projects that I have helped develop. Links that are <span class="notcs">this color </span> are not
-                really related to Computer Science and are more for entertainment.</h3>
-        </div>
+        <!--<div class="backgroundGrayImg circle padAround centerT">-->
+            <!--<h3>Projects that I have helped develop. Links that are <span class="notcs">this color </span> are not-->
+                <!--really related to Computer Science and are more for entertainment.</h3>-->
+        <!--</div>-->
 
 
         <div ng-repeat="type in types"
@@ -34,7 +34,7 @@
                                 </h2>
                                 <p>{{project.time}}</p>
                                 <p><span ng-bind-html="$sce.trustAsHtml(project.summary)"></span></p>
-                                <p>{{project.contributors}}</p>
+                                <p><span ng-bind-html="$sce.trustAsHtml(project.contributors)"></span></p>
 
 
                                 <!--<iframe class="snippet" ng-src="{{project.img | trustAsResourceUrl}}"-->

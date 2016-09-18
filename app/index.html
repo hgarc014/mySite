@@ -9,15 +9,17 @@
   <title data-ng-bind="pageTitle"></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="www/assets/angular-material.css">
 
 
   <link href="www/assets/angular-carousel.css" rel="stylesheet" type="text/css" />
+  <link href="www/assets/angular-material.css" rel="stylesheet" type="text/css" />
+  <link href="www/assets/font-awesome.css" rel="stylesheet" type="text/css" />
 
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 
 
   <!--<script src="bower_components/angular-route/angular-route.js"></script>-->
@@ -30,8 +32,9 @@
   <script src="www/assets/angular-material.js"></script>
   <script src="www/assets/angular-animate.js"></script>
   <script src="www/assets/angular-aria.js"></script>
+  <script src="www/assets/angular-inview.js"></script>
 </head>
-<body>
+<body ng-controller="HeaderCtrl as Header">
 
   <!--<ul class="menu">-->
     <!--<li><a href="#/view1">view1</a></li>-->
@@ -39,8 +42,8 @@
     <!--<li><a href="#/main">main</a></li>-->
   <!--</ul>-->
 
-  <ng-include onload="data = 'data'"
-              src="'www/templates/header.html'" ng-if="'true'"></ng-include>
+  <ng-include src="'www/header/header.html'" ></ng-include>
+  <!--<ng-include onload="data = 'data'" src="'www/header/header.html'" ng-if="'true'"></ng-include>-->
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -59,6 +62,7 @@
   <!--<script src="view1/view1.js"></script>-->
   <!--<script src="view2/view2.js"></script>-->
   <script src="www/main/main.js"></script>
+  <script src="www/header/header.js"></script>
   <script src="www/common/helper.js"></script>
   <script src="www/stories/stories.js"></script>
   <script src="www/projects/projects.js"></script>

@@ -71,6 +71,20 @@ a.active:active {
 
 /*!*ALL OF MAIN OLD CSS*!*/
 
+.defaultTxtColor{
+  color: rgb(117, 213, 255) !important;
+}
+.selectedBckColor{
+  background-color: #0028bf !important;
+}
+.fixedTopCenter{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 #header {
   color: #0C259C;
   /*font-style: Impact;*/
@@ -203,7 +217,7 @@ body,html {
   padding: 15px;
   z-index: 101;
   background-color: #fff;
-  color: ##D7D7D7;
+  color: #D7D7D7;
   padding: 20px;
   border: 2px solid #ccc;
   -moz-border-radius: 20px;
@@ -519,9 +533,9 @@ span.stars span {
 .absolute {
   position: absolute;
 }
-.pointer {
-  cursor: pointer;
-}
+/*.pointer {*/
+  /*cursor: pointer;*/
+/*}*/
 .highlight {
   box-shadow: 0px 0px 60px 10px blue;
 }
@@ -530,8 +544,8 @@ span.stars span {
 }
 .snippet {
   display:block;
-  width: 80%;
-  height: auto;
+  width: 400px;
+  height: 200px;
   /*margin-top: 2%;*/
   /*margin-bottom: 4%;*/
 }
@@ -542,52 +556,52 @@ span.stars span {
   width: 45%;
   text-align: center;
 }
-.rating {
-  overflow: hidden;
-  display: inline-block;
-  font-size: 0;
-  position: relative;
-}
-.rating-input {
-  float: right;
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  margin: 0 0 0 -16px;
-  opacity: 0;
-}
-.rating:hover .rating-star:hover,
-.rating:hover .rating-star:hover ~ .rating-star,
-.rating-input:checked ~ .rating-star {
-  cursor: pointer;
-  background-position: 0 0;
-}
-.rating-star,
-.rating:hover .rating-star {
-  position: relative;
-  float: right;
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url('Pictures/stars3.png') 0 -32px;
-}
-a.boxclose {
-  float: right;
-  margin-top: -8px;
-  margin-right: -10px;
-  cursor: pointer;
-  color: #fff;
-  border: 1px solid #AEAEAE;
-  border-radius: 30px;
-  background: #605F61;
-  font-size: 37px;
-  font-weight: bold;
-  display: inline-block;
-  line-height: 0px;
-  padding: 11px 3px;
-  text-decoration: none;
-}
-.boxclose:before {
-  content: "\00D7";
-}
+/*.rating {*/
+  /*overflow: hidden;*/
+  /*display: inline-block;*/
+  /*font-size: 0;*/
+  /*position: relative;*/
+/*}*/
+/*.rating-input {*/
+  /*float: right;*/
+  /*width: 16px;*/
+  /*height: 16px;*/
+  /*padding: 0;*/
+  /*margin: 0 0 0 -16px;*/
+  /*opacity: 0;*/
+/*}*/
+/*.rating:hover .rating-star:hover,*/
+/*.rating:hover .rating-star:hover ~ .rating-star,*/
+/*.rating-input:checked ~ .rating-star {*/
+  /*cursor: pointer;*/
+  /*background-position: 0 0;*/
+/*}*/
+/*.rating-star,*/
+/*.rating:hover .rating-star {*/
+  /*position: relative;*/
+  /*float: right;*/
+  /*display: block;*/
+  /*width: 32px;*/
+  /*height: 32px;*/
+  /*background: url('Pictures/stars3.png') 0 -32px;*/
+/*}*/
+/*a.boxclose {*/
+  /*float: right;*/
+  /*margin-top: -8px;*/
+  /*margin-right: -10px;*/
+  /*cursor: pointer;*/
+  /*color: #fff;*/
+  /*border: 1px solid #AEAEAE;*/
+  /*border-radius: 30px;*/
+  /*background: #605F61;*/
+  /*font-size: 37px;*/
+  /*font-weight: bold;*/
+  /*display: inline-block;*/
+  /*line-height: 0px;*/
+  /*padding: 11px 3px;*/
+  /*text-decoration: none;*/
+/*}*/
+/*.boxclose:before {*/
+  /*content: "\00D7";*/
+/*}*/
 

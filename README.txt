@@ -9,3 +9,9 @@ npm install grunt-contrib-qunit --save-dev
 npm install grunt-contrib-concat --save-dev
 npm install grunt-contrib-jshint --save-dev
 npm install grunt-contrib-watch --save-dev
+
+//bower
+bower install font-awesome --save
+
+//grunt
+npm install grunt --save-dev

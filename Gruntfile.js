@@ -27,12 +27,14 @@ module.exports = function (grunt) {
         bowercopy: {
             css: {
                 options: {
-                    destPrefix: 'app/www/assets'
+                    destPrefix: 'app/www/assets',
+                    srcPrefix: 'app/bower_components'
                 },
                 files: {
 
-                    'angular-carousel.css':'angular-carousel/dist/angular-carousel.css',
-                    'angular-material.css':'angular-material/angular-material.css',
+                    'angular-carousel.css':'angular-carousel/dist/angular-carousel.min.css',
+                    'angular-material.css':'angular-material/angular-material.min.css',
+                    'font-awesome.css':'font-awesome/css/font-awesome.min.css',
 
 
 
@@ -46,18 +48,20 @@ module.exports = function (grunt) {
             },
             libs: {
                 options: {
-                    destPrefix: 'app/www/assets'
+                    destPrefix: 'app/www/assets',
+                    srcPrefix: 'app/bower_components'
                 },
                 files: {
 
-                    'angular.js' : 'angular/angular.js',
-                    'angular-touch.js':'angular-touch/angular-touch.js',
-                    'angular-carousel.js':'angular-carousel/dist/angular-carousel.js',
-                    'ui-bootstrap.js':'angular-bootstrap/ui-bootstrap.js',
-                    'angular-material.js':'angular-material/angular-material.js',
-                    'angular-animate.js':'angular-animate/angular-animate.js',
-                    'angular-aria.js':'angular-aria/angular-aria.js',
-                    'angular-route.js':'angular-route/angular-route.js',
+                    'angular.js' : 'angular/angular.min.js',
+                    'angular-touch.js':'angular-touch/angular-touch.min.js',
+                    'angular-carousel.js':'angular-carousel/dist/angular-carousel.min.js',
+                    'ui-bootstrap.js':'angular-bootstrap/ui-bootstrap.min.js',
+                    'angular-material.js':'angular-material/angular-material.min.js',
+                    'angular-animate.js':'angular-animate/angular-animate.min.js',
+                    'angular-aria.js':'angular-aria/angular-aria.min.js',
+                    'angular-route.js':'angular-route/angular-route.min.js',
+                    'angular-inview.js':'angular-inview/angular-inview.js',
 
                     // 'angular.js': 'angular/angular.js',
                     // 'angular-google-maps.js': 'angular-google-maps/dist/angular-google-maps.min.js',

@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
         'ngRoute',
+        'myApp.header',
         'myApp.main',
         'myApp.stories',
         'myApp.projects',
@@ -11,7 +12,8 @@ angular.module('myApp', [
         'myApp.version',
         'angular-carousel',
         'ui.bootstrap',
-        'ngMaterial'
+        'ngMaterial',
+        'angular-inview'
     ])
 
     .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
