@@ -110,7 +110,7 @@ angular.module('myApp.projects', ['ngRoute'])
             "Tweets are fetched periodically and emptied every few days.",
             "Developed in 2015", "");
         addProject("Websites", "League Information", "http://programhenry.com/theleague/index.html", "www/img/League.png", "Henry",
-            "A website I created for a class project. It describes some basic things about the game <a href=\"http://na.leagueoflegends.com\">League of Legends</a>",
+            "My first website created using html. It refers to a computer game called \"League of Legends\"",
             "Developed in 2012", "");
         // listHeaderClose();
 
@@ -121,20 +121,20 @@ angular.module('myApp.projects', ['ngRoute'])
         addProject("Software", "twitter", "https://github.com/hgarc014/twitter", "www/img/twitter_terminal.png",
             "Henry Garcia", "A basic terminal version of twitter with real time updates. written in python. ",
             "Developed in 2015", "");
-        addProject("Software", "rshell", "https://github.com/hgarc014/rshell", "", "Henry Garcia",
+        addProject("Software", "rshell", "https://github.com/hgarc014/rshell", "www/img/rshell.png", "Henry Garcia",
             "A basic terminal based on bash, developed using c/c++ and helped tested with bash.",
             "Developed in 2014", "");
         // listHeaderClose();
 
         // listHeader();
-        addProject("Games", "DodgeBall", "https://www.youtube.com/watch?v=1tNON1eCtzk", "https://www.youtube.com/embed/1tNON1eCtzk",
+        addProject("Games", "DodgeBall", "https://www.youtube.com/watch?v=1tNON1eCtzk", "www/img/dodgeball.png",
             "Henry Garcia", "An embedded system game I created using an atmega1284 chip and some other componenets. " +
             "The goal is to dodge the balls that keep coming toward you.",
             "Developed in 2015", "");
-        addProject("Games", "git-game-v2", "https://github.com/git-game/git-game-v2", "", "Calvin Kwan, John Dixon, Juan Ruelas, Henry Garcia",
+        addProject("Games", "git-game-v2", "https://github.com/git-game/git-game-v2", "www/img/git-game2.jpg", "Calvin Kwan, John Dixon, Juan Ruelas, Henry Garcia",
             "A sequel to git-game that tests your skills on harder github commands.",
             "Developed in 2015", "");
-        addProject("Games", "git-game", "https://github.com/git-game/git-game", "", "Daniel Rameriez, Henry Garcia",
+        addProject("Games", "git-game", "https://github.com/git-game/git-game", "www/img/git-game.png", "Daniel Rameriez, Henry Garcia",
             "A terminal based game that tests your skills on github (a version control system). " +
             "You can see all versions of git-game <a href=\"https://github.com/git-game\"> here </a>",
             "Developed in 2014", "");

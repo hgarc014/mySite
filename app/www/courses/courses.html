@@ -1,19 +1,20 @@
-<div class="center bodyWidth backgroundGray circle">
-
-    <div ng-repeat="year in years" class="backgroundGrayImg circle padAround">
-        <h1 class="centerT">{{year.year}}</h1>
-        <p class="centerT">cumulative gpa: {{year.gpa}}</p>
-        <div layout="row" >
-            <div ng-repeat="season in year.seasons" layout="column" flex="100">
-                <h1 class="centerT">{{season.season}} </h1>
-                <ul style="margin:0px;">
-                    <li ng-repeat="course in season.courses">
-                        {{course.courseName}}
-                    </li>
-                </ul>
-                <!--<div ng-repeat="course in season.courses">-->
+<div layout="row" flex="100" layout-align="center" layout-fill>
+    <div layout="column" class=" circle" flex="90" layout-align="center">
+        <div ng-repeat="year in years" class="backgroundGrayImg circle padAround">
+            <h1 class="centerT">{{year.year}}</h1>
+            <p class="centerT">cumulative gpa: {{year.gpa}}</p>
+            <div layout="row">
+                <div ng-repeat="season in year.seasons" layout="column" flex="100">
+                    <h1 class="centerT">{{season.season}} </h1>
+                    <ul style="margin:0px;">
+                        <li ng-repeat="course in season.courses">
+                            {{course.courseName}}
+                        </li>
+                    </ul>
+                    <!--<div ng-repeat="course in season.courses">-->
                     <!--<p>{{course.courseName}}</p>-->
-                <!--</div>-->
+                    <!--</div>-->
+                </div>
             </div>
         </div>
     </div>

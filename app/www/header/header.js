@@ -20,7 +20,7 @@ angular.module('myApp.header', ['ngRoute'])
             {name:"Stories",page: "stories"},
             {name:"Projects",page: "projects"},
             {name:"Courses",page: "courses"},
-            {name:"Resume",url:"https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjt65fCipfPAhUQzmMKHZGfAZsQPAgD#hl=en&q=est&btnK=Google+Search"}
+            // {name:"Resume",url:"https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjt65fCipfPAhUQzmMKHZGfAZsQPAgD#hl=en&q=est&btnK=Google+Search"}
         ];
 
         console.log($scope.navPages);
