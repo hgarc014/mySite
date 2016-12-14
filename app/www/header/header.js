@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.header', ['ngRoute'])
+angular.module('myApp.header', ['ngRoute','ui.bootstrap'])
 
     // .config(['$routeProvider', function ($routeProvider) {
     //     $routeProvider.when('/main', {
@@ -15,24 +15,26 @@ angular.module('myApp.header', ['ngRoute'])
         $scope.selectedIndex= -1;
         $scope.showTop = true;
 
+
+
         $scope.navPages =[
             {name:"Home",page: "main"},
             {name:"Stories",page: "stories"},
             {name:"Projects",page: "projects"},
-            {name:"Courses",page: "courses"},
+            // {name:"Courses",page: "courses"},
             // {name:"Resume",url:"https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjt65fCipfPAhUQzmMKHZGfAZsQPAgD#hl=en&q=est&btnK=Google+Search"}
         ];
 
-        console.log($scope.navPages);
+        // console.log($scope.navPages);
 
         for(var pos in $scope.navPages){
-            console.log("/"+$scope.navPages[pos].page + "===" + $location.path());
+            // console.log("/"+$scope.navPages[pos].page + "===" + $location.path());
             if($scope.navPages[pos].page && "/"+$scope.navPages[pos].page === $location.path()){
                 $scope.selectedIndex = pos;
             }
         }
 
-        console.log($location.path());
+        // console.log($location.path());
 
         $scope.updatePage = function (index) {
             if($scope.navPages[index].url){
@@ -46,6 +48,9 @@ angular.module('myApp.header', ['ngRoute'])
             // console.log(page);
             // $location.url(page);
         };
+        $scope.isNavCollapsed = true;
+        $scope.isCollapsed = false;
+        $scope.isCollapsedHorizontal = false;
     })
 
     .filter('trustAsResourceUrl', ['$sce', function ($sce) {

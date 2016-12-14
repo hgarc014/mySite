@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.stories', ['ngRoute', 'angular-carousel'])
+angular.module('myApp.stories', ['ngRoute', 'ui.bootstrap'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/stories', {

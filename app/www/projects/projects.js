@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.projects', ['ngRoute'])
+angular.module('myApp.projects', ['ngRoute','ui.bootstrap'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/projects', {
@@ -54,6 +54,7 @@ angular.module('myApp.projects', ['ngRoute'])
         // }
 
         // types.push({type:"value",projects:[]});
+
 
         var addProject = function (type, title, url, img, contributors, summary, time, iscs) {
 
@@ -168,6 +169,7 @@ angular.module('myApp.projects', ['ngRoute'])
         //     "A little video that my brother wanted to make when he was young.",
         //     "Developed in 2010", "notcs");
         // // listHeaderClose();
+
 
     })
 

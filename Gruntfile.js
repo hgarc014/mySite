@@ -28,35 +28,39 @@ module.exports = function (grunt) {
             css: {
                 options: {
                     destPrefix: 'app/www/assets',
-                    srcPrefix: 'app/bower_components'
+                    srcPrefix: 'bower_components'
                 },
                 files: {
 
                     'angular-carousel.css':'angular-carousel/dist/angular-carousel.min.css',
                     'angular-material.css':'angular-material/angular-material.min.css',
                     'font-awesome.css':'font-awesome/css/font-awesome.min.css',
+                    'bootstrap.css':'bootstrap/dist/css/bootstrap.min.css'
 
+                }
+            },
+            fonts: {
+                options: {
+                    destPrefix: 'app/www/fonts',
+                    srcPrefix: 'bower_components'
+                },
 
-
-                    // 'font-awesome.css': 'font-awesome/css/font-awesome.min.css',
-                    // 'angular-material.css': 'angular-material/angular-material.min.css',
-                    // 'angular-busy.css': 'angular-busy/dist/angular-busy.min.css',
-                    // 'angular-csp.css' : 'angular/angular-csp.css',
-                    // 'angular-material.layouts.css' : 'angular-material/modules/layouts/angular-material.layouts.min.css',
-                    // 'angular-material-data-table.css' : 'angular-material-data-table/dist/md-data-table.min.css'
+                files: {
+//                    'bootstrap': 'bootstrap/fonts',  // set working folder / root to copy
+//                    'font-awesome': 'font-awesome/fonts',  // set working folder / root to copy
                 }
             },
             libs: {
                 options: {
                     destPrefix: 'app/www/assets',
-                    srcPrefix: 'app/bower_components'
+                    srcPrefix: 'bower_components'
                 },
                 files: {
 
                     'angular.js' : 'angular/angular.min.js',
                     'angular-touch.js':'angular-touch/angular-touch.min.js',
                     'angular-carousel.js':'angular-carousel/dist/angular-carousel.min.js',
-                    'ui-bootstrap.js':'angular-bootstrap/ui-bootstrap.min.js',
+                    'ui-bootstrap.js':'angular-bootstrap/ui-bootstrap-tpls.min.js',
                     'angular-material.js':'angular-material/angular-material.min.js',
                     'angular-animate.js':'angular-animate/angular-animate.min.js',
                     'angular-aria.js':'angular-aria/angular-aria.min.js',
