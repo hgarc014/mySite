@@ -43,11 +43,10 @@
         <!--</div>-->
         <!--/////////////-->
 
-        <div ng-repeat="genre in genres" ng-class="{shift_bg: $index % 2 == 0}">
-            <h1 >
+        <div ng-repeat="genre in genres"  ng-style="genre.bg">
+            <h1 style="text-align:center;">
                 {{genre.genre}}</h1>
-            <div  style="min-height: 305px" >
-                <div uib-carousel active="true" interval="5000" no-wrap="false">
+                <div uib-carousel active="true" interval="5000" no-wrap="false" style="background: rgba(0, 0, 0, .4);">
                     <div ng-swipe-left="$parent.$parent.next()" ng-swipe-right="$parent.$parent.prev()" uib-slide
                          ng-repeat="slide in genre.stories" index="$index" style="min-height:300px;">
 
@@ -62,7 +61,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
 
 

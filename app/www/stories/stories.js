@@ -13,6 +13,8 @@ angular.module('myApp.stories', ['ngRoute', 'ui.bootstrap'])
         helper.setTitle();
         $scope.genres = [];
 
+
+
         var addStory = function (genre, title, summary, link,img) {
 
             var genrePos = helper.getElementPos($scope.genres, "genre", genre);
@@ -24,7 +26,8 @@ angular.module('myApp.stories', ['ngRoute', 'ui.bootstrap'])
                 genrePos = $scope.genres.length;
                 genreObj = {
                     genre: genre,
-                    stories: []
+                    stories: [],
+                    bg:{'background-image' : helper.getBackground(genre)}
                 }
                 $scope.genres.push(genreObj);
             }

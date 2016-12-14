@@ -26,36 +26,6 @@ angular.module('myApp.projects', ['ngRoute','ui.bootstrap'])
             }
         ];
 
-        // var myPic;
-        // html2canvas([document.getElementById('exportable')], {
-        //     onrendered: function (canvas) {
-        //         myPic = canvas.toDataUrl("image/jpeg");
-        //     }
-
-        // var element = angular.element($document[0].querySelector('#MyID'));
-        //
-        // html2canvas(element, {
-        //     onrendered: function (canvas) {
-        //         // canvas is the final rendered <canvas> element
-        //     }
-        // });
-
-        // html2canvas($("#widget"), {
-        //     onrendered: function(canvas) {
-        //         theCanvas = canvas;
-        //         document.body.appendChild(canvas);
-        //
-        //         // Convert and download as image
-        //         Canvas2Image.saveAsPNG(canvas);
-        //         $("#img-out").append(canvas);
-        //         // Clean up
-        //         //document.body.removeChild(canvas);
-        //     }
-        // }
-
-        // types.push({type:"value",projects:[]});
-
-
         var addProject = function (type, title, url, img, contributors, summary, time, iscs) {
 
             var typePos = helper.getElementPos($scope.types, "type", type);
@@ -67,7 +37,9 @@ angular.module('myApp.projects', ['ngRoute','ui.bootstrap'])
                 typePos = $scope.types.length;
                 typeObj = {
                     type: type,
-                    projects: []
+                    projects: [],
+                    bg:{'background-image' : helper.getBackground(type)}
+
                 }
                 $scope.types.push(typeObj);
             }

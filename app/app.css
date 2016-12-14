@@ -257,7 +257,7 @@
 /*!*}*!*/
 
 .shift_bg{
-    background-image: url("/www/img/shift-bg.jpg");
+    background-image: url("/www/img/Background/water_rock.jpg");
 }
 h1 {
     color: white !important;
@@ -269,5 +269,9 @@ h3 {
     color: white !important;
 }
 p {
-color: #D7D7D7;
+/*color: #D7D7D7;*/
+    color:white;
+}
+a{
+    color: #70bdff !important;
 }

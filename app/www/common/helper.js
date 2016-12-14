@@ -4,6 +4,27 @@ angular.module('myApp.helper', ['ngRoute'])
 
     .factory('helper', function ($rootScope, $location, $log,$q) {
         return {
+
+            getBackground :function(title){
+                var BASE = "/www/img/Background/"
+                var url = "water_rock.jpg";
+                if( title == "Websites"){
+                    url = "website.jpeg";
+                } else if( title == "Software"){
+                    url = "circuit.jpg";
+                } else if (title == "Games"){
+                    url = "controller.jpeg";
+                } else if (title == "Action"){
+                    url = "dark_clouds.jpg";
+                } else if (title == "Fantasy"){
+                    url = "planet_fantasy.jpg";
+                } else if (title == "Horror"){
+                    url = "skeletons.jpg";
+                }
+
+
+                return "url("+BASE + url+")";
+            },
             
             isImage: function (src) {
 
