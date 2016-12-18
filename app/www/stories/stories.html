@@ -1,69 +1,88 @@
 <!--<link rel="icon" type="image/icon" href="favicon.ico">-->
 
 <!--<div layout="row" flex="100" layout-align="center">-->
-    <!--<div layout="column" class=" circle" flex="90" layout-align="center">-->
-        <!--<div flex="90" >-->
-        <!--class="image backgroundGrayImg circle padAround centerT"-->
-        <!--/////////////////////-->
-        <!--<div ng-repeat="genre in genres" ng-if="genre.genre"-->
-             <!--class="backgroundGrayImg circle padAround centerT">-->
+<!--<div layout="column" class=" circle" flex="90" layout-align="center">-->
+<!--<div flex="90" >-->
+<!--class="image backgroundGrayImg circle padAround centerT"-->
+<!--/////////////////////-->
+<!--<div ng-repeat="genre in genres" ng-if="genre.genre"-->
+<!--class="backgroundGrayImg circle padAround centerT">-->
 
-            <!--<ul rn-carousel rn-carousel-auto-slide="5"-->
-                <!--rn-carousel-pause-on-hover-->
-                <!--style="height:450px;margin: 0px;" rn-carousel-index="slideIndex2">-->
-                <!--&lt;!&ndash;<div layout="row" flex="60"></div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<h4>{{genre}}</h4>&ndash;&gt;-->
-                <!--<h1 class="circle" style="background-color:black;">-->
-                    <!--{{genre.genre}}</h1>-->
-                <!--<li ng-repeat="story in genre.stories" ng-if="story&&story.title">-->
-                    <!--<div class="layer padAround centerT" layout="column">-->
-                        <!--<div layout="row" class="circle highlight2">-->
-                            <!--<div layout="column" flex="50">-->
-                                <!--<h1><a ng-href="{{story.link}}" target="_blank">{{story.title}}</a></h1>-->
-                                <!--<ul>-->
-                                    <!--<p>Summary: {{story.summary}}</p>-->
-                                <!--</ul>-->
-                            <!--</div>-->
-                            <!--<div layout="column" flex="50" layout-align="center center">-->
-                                <!--<img ng-src="{{story.img}}" class="snippet" err-src="www/img/no_Image.jpg">-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<ul rn-carousel rn-carousel-auto-slide="5"-->
+<!--rn-carousel-pause-on-hover-->
+<!--style="height:450px;margin: 0px;" rn-carousel-index="slideIndex2">-->
+<!--&lt;!&ndash;<div layout="row" flex="60"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;<h4>{{genre}}</h4>&ndash;&gt;-->
+<!--<h1 class="circle" style="background-color:black;">-->
+<!--{{genre.genre}}</h1>-->
+<!--<li ng-repeat="story in genre.stories" ng-if="story&&story.title">-->
+<!--<div class="layer padAround centerT" layout="column">-->
+<!--<div layout="row" class="circle highlight2">-->
+<!--<div layout="column" flex="50">-->
+<!--<h1><a ng-href="{{story.link}}" target="_blank">{{story.title}}</a></h1>-->
+<!--<ul>-->
+<!--<p>Summary: {{story.summary}}</p>-->
+<!--</ul>-->
+<!--</div>-->
+<!--<div layout="column" flex="50" layout-align="center center">-->
+<!--<img ng-src="{{story.img}}" class="snippet" err-src="www/img/no_Image.jpg">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-                <!--</li>-->
-            <!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
 
-            <!--<div class="thumbs" flex="90">-->
-                <!--<div class="thumb ng-scope" ng-repeat="story in genre.stories"-->
-                     <!--ng-click="$parent.slideIndex2=$index">-->
-                    <!--<img class="thumb" ng-src="{{story.img}}" ng-src="" err-src="www/img/no_Image.jpg" ng-class="{'is-active': ($parent.slideIndex2==$index)}">-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--/////////////-->
-
-        <div ng-repeat="genre in genres"  ng-style="genre.bg">
-            <h1 style="text-align:center;">
-                {{genre.genre}}</h1>
-                <div uib-carousel active="true" interval="5000" no-wrap="false" style="background: rgba(0, 0, 0, .4);">
-                    <div ng-swipe-left="$parent.$parent.next()" ng-swipe-right="$parent.$parent.prev()" uib-slide
-                         ng-repeat="slide in genre.stories" index="$index" style="min-height:300px;">
+<!--<div class="thumbs" flex="90">-->
+<!--<div class="thumb ng-scope" ng-repeat="story in genre.stories"-->
+<!--ng-click="$parent.slideIndex2=$index">-->
+<!--<img class="thumb" ng-src="{{story.img}}" ng-src="" err-src="www/img/no_Image.jpg" ng-class="{'is-active': ($parent.slideIndex2==$index)}">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--/////////////-->
 
 
-                        <div class="carousel-caption">
-                            <!--<img class="snippet" ng-src="{{slide.img | trustAsResourceUrl}}"-->
-                            <!--err-src="www/img/no_Image.jpg" style="margin:auto;align:top;">-->
-                            <h2>
-                                <a ng-href="{{slide.link}}" target="_blank">{{slide.title}}</a>
-                            </h2>
-                            <p>{{slide.summary}}</p>
-                        </div>
-                    </div>
-                </div>
-        </div>
+<!--<div layout-fill>-->
+<!--<div layout="row" flex="100" >-->
 
-
-    <!--</div>-->
+<!--<div layout="column" flex="100">-->
+<div class="parent_center"
+     style="background: url(/www/img/Background/ceiling_lamps.jpg) bottom center no-repeat #000;height:300px;">
+    <div class="child_center">
+        <h2>Below are stories that I have written.</h2>
+        <p>Feel free to read any of them.</p>
+        <!--<p>what happens if i add more text?</p>-->
+    </div>
+</div>
 <!--</div>-->
 
+<!--</div>-->
+
+<div ng-repeat="genre in genres" ng-style="genre.bg">
+    <h1 class="carousel_header">
+        {{genre.genre}}</h1>
+    <div uib-carousel active="true" interval="5000" no-wrap="false" style="background: rgba(0, 0, 0, .4);">
+        <div ng-swipe-left="$parent.$parent.next()" ng-swipe-right="$parent.$parent.prev()" uib-slide
+             ng-repeat="slide in genre.stories" index="$index" style="min-height:300px;">
+
+
+            <div class="carousel-caption">
+                <!--<img class="snippet" ng-src="{{slide.img | trustAsResourceUrl}}"-->
+                <!--err-src="www/img/no_Image.jpg" style="margin:auto;align:top;">-->
+                <h2>
+                    <a ng-href="{{slide.link}}" target="_blank">{{slide.title}}</a>
+                </h2>
+                <p>{{slide.summary}}</p>
+                <!--<h2>-->
+                <!--<a ng-href="{{slide.link}}" target="_blank">Read it</a>-->
+                <!--</h2>-->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--</div>-->
+
+<!--</div>-->

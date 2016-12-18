@@ -1,80 +1,89 @@
 <!--<div layout="row" flex="100" layout-align="center" layout-fill>-->
-    <!--<div layout="column" class=" circle" flex="90" layout-align="center">-->
-        <!--<div class="backgroundGrayImg circle padAround centerT">-->
-        <!--<h3>Projects that I have helped develop. Links that are <span class="notcs">this color </span> are not-->
-        <!--really related to Computer Science and are more for entertainment.</h3>-->
-        <!--</div>-->
-        <!--////////////////-->
+<!--<div layout="column" class=" circle" flex="90" layout-align="center">-->
+<!--<div class="backgroundGrayImg circle padAround centerT">-->
+<!--<h3>Projects that I have helped develop. Links that are <span class="notcs">this color </span> are not-->
+<!--really related to Computer Science and are more for entertainment.</h3>-->
+<!--</div>-->
+<!--////////////////-->
 
-        <!--<div ng-repeat="type in types"-->
-             <!--class="backgroundGrayImg circle padAround centerT">-->
-            <!--<ul rn-carousel rn-carousel-auto-slide="5"-->
-                <!--rn-carousel-pause-on-hover style="height:450px;margin: 0px;"-->
-                <!--rn-carousel-index="slideIndex2">-->
-                <!--&lt;!&ndash;<div layout="row" flex="60"></div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<h4>{{genre}}</h4>&ndash;&gt;-->
-                <!--<h1 class="circle" style="background-color:black;">-->
-                    <!--{{type.type}}</h1>-->
-                <!--<li ng-repeat="project in type.projects">-->
-                    <!--<div class="layer padAround centerT " layout="column">-->
-                        <!--<div layout="row" class="circle highlight2">-->
-                            <!--<div layout="column" flex="50">-->
-                                <!--<h2>-->
-                                    <!--<a ng-href="{{project.url}}" target="_blank">{{project.title}}</a>-->
-                                <!--</h2>-->
-                                <!--<p>{{project.time}}</p>-->
-                                <!--<p><span ng-bind-html="$sce.trustAsHtml(project.summary)"></span></p>-->
-                                <!--<p><span ng-bind-html="$sce.trustAsHtml(project.contributors)"></span></p>-->
-                                <!--&lt;!&ndash;<iframe class="snippet" ng-src="{{project.img | trustAsResourceUrl}}"&ndash;&gt;-->
-                                <!--&lt;!&ndash;ng-if="project.img && !project.isImg"></iframe>&ndash;&gt;-->
-                                <!--&lt;!&ndash;<p>Summary: {{story.summary}}</p>&ndash;&gt;-->
-                            <!--</div>-->
-                            <!--<div layout="column" flex="50" layout-align="center center">-->
-                                <!--<img class="snippet" ng-src="{{project.img | trustAsResourceUrl}}"-->
-                                     <!--err-src="www/img/no_Image.jpg">-->
-                                <!--&lt;!&ndash;<h1><a href="Documents/Stories pdf/Gun Shots.pdf">{{story.title}}</a></h1>&ndash;&gt;-->
-                                <!--&lt;!&ndash;<img ng-src="{{story.img}}" class="center" style="width:150px;height:150px;">&ndash;&gt;-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <!--<div class="thumbs" flex="90">-->
-                <!--<img class="thumb ng-scope" ng-repeat="project in type.projects"-->
-                     <!--ng-click="$parent.slideIndex2=$index"-->
-                     <!--ng-class="{'is-active': ($parent.slideIndex2==$index)}"-->
-                     <!--ng-src="{{project.img}}"-->
-                     <!--err-src="www/img/no_Image.jpg">-->
-                <!--</img>-->
-            <!--</div>-->
-        <!--</div>-->
+<!--<div ng-repeat="type in types"-->
+<!--class="backgroundGrayImg circle padAround centerT">-->
+<!--<ul rn-carousel rn-carousel-auto-slide="5"-->
+<!--rn-carousel-pause-on-hover style="height:450px;margin: 0px;"-->
+<!--rn-carousel-index="slideIndex2">-->
+<!--&lt;!&ndash;<div layout="row" flex="60"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;<h4>{{genre}}</h4>&ndash;&gt;-->
+<!--<h1 class="circle" style="background-color:black;">-->
+<!--{{type.type}}</h1>-->
+<!--<li ng-repeat="project in type.projects">-->
+<!--<div class="layer padAround centerT " layout="column">-->
+<!--<div layout="row" class="circle highlight2">-->
+<!--<div layout="column" flex="50">-->
+<!--<h2>-->
+<!--<a ng-href="{{project.url}}" target="_blank">{{project.title}}</a>-->
+<!--</h2>-->
+<!--<p>{{project.time}}</p>-->
+<!--<p><span ng-bind-html="$sce.trustAsHtml(project.summary)"></span></p>-->
+<!--<p><span ng-bind-html="$sce.trustAsHtml(project.contributors)"></span></p>-->
+<!--&lt;!&ndash;<iframe class="snippet" ng-src="{{project.img | trustAsResourceUrl}}"&ndash;&gt;-->
+<!--&lt;!&ndash;ng-if="project.img && !project.isImg"></iframe>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Summary: {{story.summary}}</p>&ndash;&gt;-->
+<!--</div>-->
+<!--<div layout="column" flex="50" layout-align="center center">-->
+<!--<img class="snippet" ng-src="{{project.img | trustAsResourceUrl}}"-->
+<!--err-src="www/img/no_Image.jpg">-->
+<!--&lt;!&ndash;<h1><a href="Documents/Stories pdf/Gun Shots.pdf">{{story.title}}</a></h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<img ng-src="{{story.img}}" class="center" style="width:150px;height:150px;">&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--</ul>-->
+<!--<div class="thumbs" flex="90">-->
+<!--<img class="thumb ng-scope" ng-repeat="project in type.projects"-->
+<!--ng-click="$parent.slideIndex2=$index"-->
+<!--ng-class="{'is-active': ($parent.slideIndex2==$index)}"-->
+<!--ng-src="{{project.img}}"-->
+<!--err-src="www/img/no_Image.jpg">-->
+<!--</img>-->
+<!--</div>-->
+<!--</div>-->
 
-        <!--//////////////////////////////-->
+<!--//////////////////////////////-->
 
-        <!--<div>-->
+<!--<div>-->
 
-            <div ng-repeat="type in types"  ng-style="type.bg">
-                <h1 style="text-align:center;">{{type.type}}</h1>
-                    <div uib-carousel active="true" interval="5000" no-wrap="false" style="background: rgba(0, 0, 0, .4);">
-                        <div ng-swipe-left="$parent.$parent.next()" ng-swipe-right="$parent.$parent.prev()" uib-slide
-                             ng-repeat="slide in type.projects" index="$index" style="min-height:250px;">
+<div class="parent_center"
+     style="background: url(/www/img/Background/architecture.jpg) bottom center no-repeat #000;height:300px;">
+    <div class="child_center">
+        <h2>Below are projects that I have created.</h2>
+        <!--<p>Feel free to read any of them.</p>-->
+        <!--<p>what happens if i add more text?</p>-->
+    </div>
+</div>
+
+<div ng-repeat="type in types" ng-style="type.bg">
+    <h1 class="carousel_header">{{type.type}}</h1>
+    <div uib-carousel active="true" interval="5000" no-wrap="false" style="background: rgba(0, 0, 0, .4);">
+        <div ng-swipe-left="$parent.$parent.next()" ng-swipe-right="$parent.$parent.prev()" uib-slide
+             ng-repeat="slide in type.projects" index="$index" style="min-height:250px;">
 
 
-                            <div class="carousel-caption">
-                                <!--<img class="snippet" ng-src="{{slide.img | trustAsResourceUrl}}"-->
-                                     <!--err-src="www/img/no_Image.jpg" style="margin:auto;align:top;">-->
-                                <h2>
-                                    <a ng-href="{{slide.url}}" target="_blank">{{slide.title}}</a>
-                                </h2>
-                                <p>{{slide.time}}</p>
-                                <p><span ng-bind-html="$sce.trustAsHtml(slide.summary)"></span></p>
-                                <p><span ng-bind-html="$sce.trustAsHtml(slide.contributors)"></span></p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="carousel-caption">
+                <!--<img class="snippet" ng-src="{{slide.img | trustAsResourceUrl}}"-->
+                <!--err-src="www/img/no_Image.jpg" style="margin:auto;align:top;">-->
+                <h2>
+                    <a ng-href="{{slide.url}}" target="_blank">{{slide.title}}</a>
+                </h2>
+                <p>{{slide.time}}</p>
+                <p><span ng-bind-html="$sce.trustAsHtml(slide.summary)"></span></p>
+                <p><span ng-bind-html="$sce.trustAsHtml(slide.contributors)"></span></p>
             </div>
+        </div>
+    </div>
+</div>
 
-        <!--</div>-->
+<!--</div>-->
 
-    <!--</div>-->
+<!--</div>-->
 <!--</div>-->
