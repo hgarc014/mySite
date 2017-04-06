@@ -19,7 +19,7 @@ angular.module('myApp.header', ['ngRoute','ui.bootstrap'])
 
         $scope.navPages =[
             {name:"Home",page: "main"},
-            {name:"Stories",page: "stories"},
+            // {name:"Stories",page: "stories"},
             {name:"Projects",page: "projects"},
             // {name:"Courses",page: "courses"},
             // {name:"Resume",url:"https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjt65fCipfPAhUQzmMKHZGfAZsQPAgD#hl=en&q=est&btnK=Google+Search"}

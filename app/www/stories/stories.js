@@ -14,6 +14,17 @@ angular.module('myApp.stories', ['ngRoute', 'ui.bootstrap'])
         $scope.genres = [];
 
 
+        $scope.examples = [
+            {
+                imageUrl: 'http://placeimg.com/800/200'
+            },
+            {
+                imageUrl: 'http://placeimg.com/800/500'
+            },
+            {
+                imageUrl: 'http://placeimg.com/800/200'
+            }
+        ];
 
         var addStory = function (genre, title, summary, link,img) {
 

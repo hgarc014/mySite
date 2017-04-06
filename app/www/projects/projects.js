@@ -82,9 +82,9 @@ angular.module('myApp.projects', ['ngRoute','ui.bootstrap'])
             "Currently the site is hosted by a free service so it can be found offline occasionally. " +
             "Tweets are fetched periodically and emptied every few days.",
             "Developed in 2015", "");
-        addProject("Websites", "League Information", "http://programhenry.com/theleague/index.html", "www/img/League.png", "Henry",
-            "My first website created using html. It refers to a computer game called \"League of Legends\"",
-            "Developed in 2012", "");
+        // addProject("Websites", "League Information", "http://programhenry.com/theleague/index.html", "www/img/League.png", "Henry",
+        //     "My first website created using html. It refers to a computer game called \"League of Legends\"",
+        //     "Developed in 2012", "");
         // listHeaderClose();
 
         // listHeader();
@@ -111,14 +111,14 @@ angular.module('myApp.projects', ['ngRoute','ui.bootstrap'])
             "A terminal based game that tests your skills on github (a version control system). " +
             "You can see all versions of git-game <a href=\"https://github.com/git-game\"> here </a>",
             "Developed in 2014", "");
-        addProject("Games", "Adventures of Brady", "/Adventures of Brady.zip", "", "Rodrigo Aguayo, Henry Garcia",
+        addProject("Games", "Adventures of Brady", "/Downloads/Games/Adventures of Brady.zip", "", "Rodrigo Aguayo, Henry Garcia",
             "A game created using <a href=\"http://www.yoyogames.com/studio\">GameMaker</a>. " +
             "You play as Mr. Brady and have to kill the zombie leader in order to save the world from the zombie apocalypse.",
             "Developed in 2013", "");
-        addProject("Games", "Hangman (windows terminal)", "/Hangman.zip", "", "Henry Garcia",
+        addProject("Games", "Hangman (windows terminal)", "/Downloads/Games/Hangman.zip", "", "Henry Garcia",
             "A terminal based hang man game.",
             "Developed in 2013");
-        addProject("Games", "Platform", "/Platform.zip", "", "Henry Garcia",
+        addProject("Games", "Platform", "/Downloads/Games/Platform.zip", "", "Henry Garcia",
             "A platforming game that involves the main character as a rectangle. He neeeds to get to the exit. " +
             "This game was made with <a href=\"http://www.yoyogames.com/studio\">GameMaker</a>.",
             "Developed in 2010", "");

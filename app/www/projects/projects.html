@@ -62,9 +62,10 @@
     </div>
 </div>
 
-<div ng-repeat="type in types" ng-style="type.bg">
+<!--ng-style="type.bg"-->
+<div ng-repeat="type in types" >
     <h1 class="carousel_header">{{type.type}}</h1>
-    <div uib-carousel active="true" interval="5000" no-wrap="false" style="background: rgba(0, 0, 0, .4);">
+    <div uib-carousel active="true" interval="000" no-wrap="false" style="background: rgba(0, 0, 0, .4);">
         <div ng-swipe-left="$parent.$parent.next()" ng-swipe-right="$parent.$parent.prev()" uib-slide
              ng-repeat="slide in type.projects" index="$index" style="min-height:250px;">
 
