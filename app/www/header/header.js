@@ -1,57 +1,116 @@
 'use strict';
 
-angular.module('myApp.header', ['ngRoute','ui.bootstrap'])
+angular.module('myApp.header', ['ngRoute', 'ui.bootstrap'])
 
-    // .config(['$routeProvider', function ($routeProvider) {
-    //     $routeProvider.when('/main', {
-    //         templateUrl: 'www/main/main.html',
-    //         controller: 'MainCtrl'
-    //     });
-    // }])
+// .config(['$routeProvider', function ($routeProvider) {
+//     $routeProvider.when('/main', {
+//         templateUrl: 'www/main/main.html',
+//         controller: 'MainCtrl'
+//     });
+// }])
 
-    .controller('HeaderCtrl', function ($scope, $rootScope, $location, $log, helper,$window) {
-        helper.setTitle();
+    .controller('HeaderCtrl', function ($scope, $rootScope, $location, $log, helper, $window) {
 
-        $scope.selectedIndex= -1;
+
+        ////---------------------- Variables ----------------------------------///
+
+        $scope.selectedIndex = -1;
         $scope.showTop = true;
 
+        $scope.navbar = {
+            isNavCollapsed: true,
+            dropdown: false
+        };
 
-
-        $scope.navPages =[
-            {name:"Home",page: "main"},
-            // {name:"Stories",page: "stories"},
-            {name:"Projects",page: "projects"},
-            // {name:"Courses",page: "courses"},
+        $scope.navPages = [
+            {
+                name: "Home",
+                page: "main",
+                title: "Henry"
+            },
+            // {
+            //     name: "Stories",
+            //     page: "stories",
+            //     title: "Henry's stories"
+            // },
+            {
+                name: "Projects",
+                page: "projects",
+                title: "Henry's projects"
+            }
+            // {
+            //     name: "Courses",
+            //     page: "courses",
+            //     title: "Henry's courses"
+            // },
             // {name:"Resume",url:"https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjt65fCipfPAhUQzmMKHZGfAZsQPAgD#hl=en&q=est&btnK=Google+Search"}
         ];
-
-        // console.log($scope.navPages);
-
-        for(var pos in $scope.navPages){
-            // console.log("/"+$scope.navPages[pos].page + "===" + $location.path());
-            if($scope.navPages[pos].page && "/"+$scope.navPages[pos].page === $location.path()){
-                $scope.selectedIndex = pos;
-            }
+        var titles = {};
+        titles["/"] = "Henry";
+        for (var page in $scope.navPages) {
+            titles["/" + page.page] = page.title;
         }
 
-        // console.log($location.path());
+        ////---------------------- local functions ----------------------------------///
+
+        var isEmpty = function (obj) {
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key))
+                    return false;
+            }
+            return true;
+        };
+
+        ////---------------------- Scope functions ----------------------------------///
+
+        // $scope.checkDropdown = function(dropdown){
+        //     // console.log("NAV:");
+        //     // console.log($scope.navbar);
+        //     dropdown = !dropdown;
+        //     // $scope.navbar.dropdown = !$scope.navbar.dropdown;
+        // }
+
+        $scope.UpdatePageIndex = function () {
+
+
+            if (!isEmpty(titles[$location.path()])) {
+                // console.log("found position " + titles[$location.path()]);
+                $rootScope.pageTitle = titles[$location.path()];
+            }
+
+            for (var pos in $scope.navPages) {
+                // console.log("/"+$scope.navPages[pos].page + "===" + $location.path());
+                if ($scope.navPages[pos].page && "/" + $scope.navPages[pos].page === $location.path()) {
+                    $scope.selectedIndex = pos;
+                }
+            }
+        };
+
 
         $scope.updatePage = function (index) {
-            if($scope.navPages[index].url){
+            if ($scope.navPages[index].url) {
                 $window.open($scope.navPages[index].url, '_blank');
                 // $location.href = $scope.navPages[index].url;
-            }else{
+            } else {
+                console.log($scope.navbar.isNavCollapsed);
+                if (!$scope.navbar.isNavCollapsed)
+                    $scope.navbar.isNavCollapsed = true;
+                console.log($scope.isNavCollapsed);
                 $location.url($scope.navPages[index].page);
                 $scope.selectedIndex = index;
             }
 
-            // console.log(page);
-            // $location.url(page);
         };
-        $scope.isNavCollapsed = true;
-        $scope.isCollapsed = false;
-        $scope.isCollapsedHorizontal = false;
+
+        ////---------------------- Root Scope functions ----------------------------------///
+
+        $rootScope.$on('$routeChangeSuccess', function () {
+            $scope.UpdatePageIndex();
+        });
+
     })
+
+    ////---------------------- Directives and filters ----------------------------------///
 
     .filter('trustAsResourceUrl', ['$sce', function ($sce) {
         return function (val) {

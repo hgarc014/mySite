@@ -1,119 +1,53 @@
-<!--<div layout-padding-gt-xs flex="100" layout-align="center">-->
-
-<!--<nav class="navbar navbar-default" role="navigation">-->
-    <!--<div class="navbar-header">-->
-        <!--<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">-->
-            <!--<span class="sr-only">Toggle navigation</span>-->
-            <!--<span class="icon-bar"></span>-->
-            <!--<span class="icon-bar"></span>-->
-            <!--<span class="icon-bar"></span>-->
-        <!--</button>-->
-        <!--<a class="navbar-brand" href="#">A menu</a>-->
-    <!--</div>-->
-    <!--<div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">-->
-        <!--<ul class="nav navbar-nav">-->
-            <!--<li><a href="#">Link 1</a></li>-->
-            <!--<li><a href="#">Link 2</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-<!--</nav>-->
-
-
 <nav class="navbar navbar-fixed-top navbar-custom" role="navigation"
      style="border-bottom: 1px solid rgba(255,255,255,.3);background-color:black;">
     <div class="container ">
         <div class="navbar-header">
             <p style="margin-bottom:0px;" class="navbar-brand" ng-click="updatePage(0)">Program Henry</p>
-            <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed" style="color: white; background-color: rgba(255,255,255,.2);">
-                <!--<span class="sr-only">Toggle navigation</span>-->
-                <!--<span class="icon-bar" style="background-color:white;"></span>-->
-                <!--<span class="icon-bar"></span>-->
-                <!--<span class="icon-bar"></span>-->
+            <button type="button" class="navbar-toggle" ng-click="navbar.isNavCollapsed = !navbar.isNavCollapsed"
+                    style="color: white; background-color: rgba(255,255,255,.2);">
                 Menu <i class="fa fa-bars"></i>
             </button>
-            <!--<a class="navbar-brand">Menu</a>-->
         </div>
 
-        <!--<div class="navbar-header">-->
-            <!--<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">-->
-                <!--<span class="sr-only">Toggle navigation</span>-->
-                <!--<span class="icon-bar"></span>-->
-                <!--<span class="icon-bar"></span>-->
-                <!--<span class="icon-bar"></span>-->
-            <!--</button>-->
-            <!--<a class="navbar-brand" href="#">A menu</a>-->
-        <!--</div>-->
 
-        <!--<div class="navbar-header">-->
-            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" style="color: white;-->
-    <!--background-color: rgba(255,255,255,.2);">-->
-                <!--Menu <i class="fa fa-bars"></i>-->
-            <!--</button>-->
-        <!--</div>-->
-
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse" uib-collapse="isNavCollapsed">
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse" uib-collapse="navbar.isNavCollapsed">
             <ul class="nav navbar-nav ">
-                <li ng-repeat="page in navPages" >
-                    <!--background-color: rgba(255,255,255,.3); .active-->
-                    <a style="text-align: center;" ng-class="{selected_page:selectedIndex == $index}" ng-click="updatePage($index)" ng-href="#/{{page.page}}">{{page.name}}</a>
+
+                <!--&lt;!&ndash;DROPDOWN EXAMPLE&ndash;&gt;-->
+                <!---->
+                <!--<li uib-dropdown is-open="navbar.dropdown" ng-mouseleave="checkDropdown()">-->
+                <!--<a ng-mouseover="checkDropdown()">-->
+                <!--Button dropdown <span class="caret"></span>-->
+                <!--</a>-->
+                <!--<ul uib-dropdown-menu role="menu" aria-labelledby="single-button">-->
+                <!--<li><a href="#">Action</a></li>-->
+                <!--<li><a href="#">Another action</a></li>-->
+                <!--<li><a href="#">Something else here</a></li>-->
+                <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li role="menuitem"><a href="#">Separated link</a></li>&ndash;&gt;-->
+                <!--</ul>-->
+                <!--</li>-->
+                <li ng-repeat="page in navPages track by $index">
+                    <a style="text-align: center;cursor:pointer;" ng-class="{selected_page:selectedIndex == $index}"
+                       ng-click="updatePage($index)">{{page.name}}</a>
+
                 </li>
                 <li>
                     <a style="color: white;text-align: center;" target="_blank" class="fa fa-github fa-3x"
                        href="https://github.com/hgarc014"></a>
+                    <hr style="margin: 10px 0px 10px 0px" ng-show="!navbar.isNavCollapsed">
                 </li>
                 <li>
-                    <a style="color:#287bbc;text-align: center;" target="_blank" class="fa fa-linkedin-square fa-lg fa-3x"
+                    <a style="color:#287bbc;text-align: center;" target="_blank"
+                       class="fa fa-linkedin-square fa-lg fa-3x"
                        href="https://www.linkedin.com/pub/henry-garcia/96/2ab/1b3"></a>
+                    <hr style="margin: 10px 0px 10px 0px" ng-show="!navbar.isNavCollapsed">
                 </li>
                 <li>
                     <a style="color:#e52d27;text-align: center;" target="_blank" class="fa fa-youtube-square fa-3x"
                        href="https://www.youtube.com/channel/UCCBLjKKxyRNtD1Qq3HBOgsQ"></a>
                 </li>
-                <!--<li>-->
-                    <!--<div layout="row" layout-align="center" >-->
-                        <!--<div flex>-->
-                            <!--<a style="color: white;" target="_blank" class="fa fa-github fa-3x"-->
-                               <!--href="https://github.com/hgarc014"></a>-->
-                        <!--</div>-->
-                        <!--<div flex>-->
-                            <!--<a style="color:#287bbc;" target="_blank" class="fa fa-linkedin-square fa-lg fa-3x"-->
-                               <!--href="https://www.linkedin.com/pub/henry-garcia/96/2ab/1b3"></a>-->
-                        <!--</div>-->
-                        <!--<div flex>-->
-                            <!--<a style="color:#e52d27;" target="_blank" class="fa fa-youtube-square fa-3x"-->
-                               <!--href="https://www.youtube.com/channel/UCCBLjKKxyRNtD1Qq3HBOgsQ"></a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</li>-->
             </ul>
         </div>
     </div>
 </nav>
-
-<!--</div>-->
-
-
-<!--<div flex="100" layout="row" layout-align="center">-->
-
-<!--<div layout-padding-gt-xs layout="column" flex="90" layout-align="center" style="margin-top: 10px;">-->
-
-
-<!--<div>-->
-<!--<md-button ng-repeat="page in navPages"-->
-<!--ng-class="{ 'selectedBckColor': $index == selectedIndex }"-->
-<!--class="defaultTxtColor"-->
-<!--ng-click="updatePage($index)">-->
-<!--{{page.name}}-->
-<!--</md-button>-->
-<!--</div>-->
-
-
-<!--&lt;!&ndash;<div layout="row" class="nav" layout-align="center center" in-view="showTop = !$inview">&ndash;&gt;-->
-<!--&lt;!&ndash;<ng-include src="'www/templates/navigationBar.html'"></ng-include>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;<div layout="row" class="nav fixedTopCenter" layout-align="center center" ng-if="showTop">&ndash;&gt;-->
-<!--&lt;!&ndash;<ng-include src="'www/templates/navigationBar.html'"></ng-include>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-<!--</div>-->
-<!--</div>-->

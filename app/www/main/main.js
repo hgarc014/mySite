@@ -10,8 +10,6 @@ angular.module('myApp.main', ['ngRoute'])
     }])
 
     .controller('MainCtrl', function ($scope, $rootScope, $location, $log, helper) {
-        helper.setTitle();
-
 
 
     })

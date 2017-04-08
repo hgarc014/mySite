@@ -1,45 +1,5 @@
 <div layout="row" layout-fill flex="100" layout-align="center" style="background: url(/www/img/Background/intro_bg.jpg) bottom center no-repeat #000;" class="intro">
 
-    <!--background-image:url(/www/img/Background/intro-bg.jpg)-->
-
-
-
-    <!--<div layout="row" class="circle">-->
-        <!--<div layout="column" flex="20" layout-align="center">-->
-            <!--<div align="right">-->
-                <!--<a href="www/img/me.jpg"><img class="resizeimg circle" src="www/img/me_small.jpg"></a>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div layout="column" flex="60" class="backgroundHex circle" style="text-align:center;">-->
-            <!--<h2>Henry Garcia</h2>-->
-            <!--<p>Undergraduate Student at <br><a href="http://www.ucr.edu/">University of California,-->
-                <!--Riverside</a><br><a href="mailto:henry@programhenry.com">henry@programhenry.com</a></p>-->
-
-            <!--<div id="subscribeSite"></div>-->
-
-            <!--<div layout="row" layout-align="center" >-->
-                <!--<div flex>-->
-                    <!--<a style="color: black;" target="_blank" class="fa fa-github fa-3x hoverColor"-->
-                       <!--href="https://github.com/hgarc014"></a>-->
-                <!--</div>-->
-                <!--<div flex>-->
-                    <!--<a style="color:#287bbc;" target="_blank" class="fa fa-linkedin-square fa-lg fa-3x hoverColor"-->
-                       <!--href="https://www.linkedin.com/pub/henry-garcia/96/2ab/1b3"></a>-->
-                <!--</div>-->
-                <!--<div flex>-->
-                    <!--<a style="color:#e52d27;" target="_blank" class="fa fa-youtube-square fa-3x hoverColor"-->
-                       <!--href="https://www.youtube.com/channel/UCCBLjKKxyRNtD1Qq3HBOgsQ"></a>-->
-                <!--</div>-->
-            <!--</div>-->
-
-        <!--</div>-->
-        <!--<div layout="column" flex="20" layout-align="center">-->
-            <!--<div align="left">-->
-                <!--<a href="www/img/yinyang.png"><img src="www/img/yinyang_small.png"-->
-                                                   <!--class="resizeimg circle"></a>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
     <div layout="column" class=" circle" flex="90" layout-align="center">
 
         <div >
@@ -47,6 +7,24 @@
             <p>My name is Henry and I am currently a student at University of California Riverside. I created this
                 website in order to display my projects and stories.</p>
         </div>
-
     </div>
+</div>
+
+<div layout="column"  ng-controller="ProjectsCtrl">
+    <ng-include src="'www/projects/projects.html'">
+
+    </ng-include>
+    <!--<p>Message from Footer Controller: {{project.types | json}}</p>-->
+</div>
+<div layout="column"  ng-controller="StoriesCtrl">
+    <ng-include src="'www/stories/stories.html'">
+
+    </ng-include>
+    <!--<p>Message from Footer Controller: {{project.types | json}}</p>-->
+</div>
+<div layout="column"  ng-controller="CoursesCtrl">
+    <ng-include src="'www/courses/courses.html'">
+
+    </ng-include>
+    <!--<p>Message from Footer Controller: {{project.types | json}}</p>-->
 </div>

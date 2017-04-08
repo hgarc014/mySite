@@ -10,7 +10,6 @@ angular.module('myApp.stories', ['ngRoute', 'ui.bootstrap'])
     }])
 
     .controller('StoriesCtrl', function (helper, $log, $scope) {
-        helper.setTitle();
         $scope.genres = [];
 
 

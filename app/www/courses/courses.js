@@ -10,7 +10,6 @@ angular.module('myApp.courses', ['ngRoute'])
     }])
 
     .controller('CoursesCtrl', function ($scope, helper, $filter) {
-        helper.setTitle();
 
 
         var getElementPos = function (array, elem, elemVal) {
