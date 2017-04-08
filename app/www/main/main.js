@@ -9,7 +9,19 @@ angular.module('myApp.main', ['ngRoute'])
         });
     }])
 
-    .controller('MainCtrl', function ($scope, $rootScope, $location, $log, helper) {
+    .controller('MainCtrl', function ($scope, $rootScope, $location, $log, helper, $document) {
+
+        // angular.module('myApp', ['duScroll']).
+        // controller('MyCtrl', function($scope, $document){
+        //         $scope.toTheTop = function() {
+        //             $document.scrollTop(0, 5000);
+        //         }
+        //         var section2 = angular.element(document.getElementById('section-2'));
+        //         $scope.toSection2 = function() {
+        //             $document.scrollTo(section2, 30, 1000);
+        //         }
+            // }
+        // );
 
 
     })

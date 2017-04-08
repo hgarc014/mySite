@@ -46,8 +46,8 @@ module.exports = function (grunt) {
                 },
 
                 files: {
-//                    'bootstrap': 'bootstrap/fonts',  // set working folder / root to copy
-//                    'font-awesome': 'font-awesome/fonts',  // set working folder / root to copy
+                    'bootstrap': 'bootstrap/fonts',  // set working folder / root to copy
+                    'font-awesome': 'font-awesome/fonts',  // set working folder / root to copy
                 }
             },
             libs: {
@@ -66,6 +66,7 @@ module.exports = function (grunt) {
                     'angular-aria.js':'angular-aria/angular-aria.min.js',
                     'angular-route.js':'angular-route/angular-route.min.js',
                     'angular-inview.js':'angular-inview/angular-inview.js',
+                    'angular-scroll.js' : 'angular-scroll/angular-scroll.min.js'
 
                     // 'angular.js': 'angular/angular.js',
                     // 'angular-google-maps.js': 'angular-google-maps/dist/angular-google-maps.min.js',

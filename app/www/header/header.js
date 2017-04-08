@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.header', ['ngRoute', 'ui.bootstrap'])
+angular.module('myApp.header', ['ngRoute', 'ui.bootstrap', 'duScroll'])
 
 // .config(['$routeProvider', function ($routeProvider) {
 //     $routeProvider.when('/main', {
@@ -9,7 +9,7 @@ angular.module('myApp.header', ['ngRoute', 'ui.bootstrap'])
 //     });
 // }])
 
-    .controller('HeaderCtrl', function ($scope, $rootScope, $location, $log, helper, $window) {
+    .controller('HeaderCtrl', function ($scope, $rootScope, $location, $log, helper, $window, $document, $routeParams) {
 
 
         ////---------------------- Variables ----------------------------------///
@@ -72,7 +72,6 @@ angular.module('myApp.header', ['ngRoute', 'ui.bootstrap'])
 
         $scope.UpdatePageIndex = function () {
 
-
             if (!isEmpty(titles[$location.path()])) {
                 // console.log("found position " + titles[$location.path()]);
                 $rootScope.pageTitle = titles[$location.path()];
@@ -84,22 +83,33 @@ angular.module('myApp.header', ['ngRoute', 'ui.bootstrap'])
                     $scope.selectedIndex = pos;
                 }
             }
+
+            if ($routeParams.id) {
+                $scope.goto($routeParams.id);
+            }
         };
 
 
         $scope.updatePage = function (index) {
+
             if ($scope.navPages[index].url) {
                 $window.open($scope.navPages[index].url, '_blank');
                 // $location.href = $scope.navPages[index].url;
             } else {
-                console.log($scope.navbar.isNavCollapsed);
                 if (!$scope.navbar.isNavCollapsed)
                     $scope.navbar.isNavCollapsed = true;
-                console.log($scope.isNavCollapsed);
+
+                // $location.url("/main").search({"id":$scope.navPages[index].page})
                 $location.url($scope.navPages[index].page);
                 $scope.selectedIndex = index;
             }
 
+        };
+
+        $scope.goto = function (id) {
+            var section = angular.element(document.getElementById(id));
+            if (!isEmpty(section))
+                $document.scrollTo(section, 50, 1000);
         };
 
         ////---------------------- Root Scope functions ----------------------------------///
