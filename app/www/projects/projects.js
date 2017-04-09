@@ -9,9 +9,9 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
         });
     }])
 
-    .controller('ProjectsCtrl', function ($scope, helper, $sce, $document) {
+    .controller('ProjectsCtrl', function ($scope, helper, $sce, $document, $timeout) {
         $scope.$sce = $sce;
-        
+
         var websites = {
             "type": "Websites",
             "bg": {
@@ -26,8 +26,7 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "summary": "SmartDocFinder is a data-driven patient-centric service to match patients to healthcare providers, which achieves increased patient satisfaction and reduced healthcare costs.",
                     "time": "Developing",
                     "iscs": "",
-                    "isImg": false,
-                    "$$hashKey": "object:42"
+                    "isImg": false
                 },
                 {
                     "title": "TweetSearcher",
@@ -37,8 +36,7 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "summary": "A simple tweet search engine that uses Lucene. Currently the site is hosted by a free service so it can be found offline occasionally. Tweets are fetched periodically and emptied every few days.",
                     "time": "Developed in 2015",
                     "iscs": "",
-                    "isImg": false,
-                    "$$hashKey": "object:43"
+                    "isImg": false
                 }
                 // ,{
                 //     title: "League Information",
@@ -77,7 +75,6 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "time": "Developed in 2015",
                     "iscs": "",
                     "isImg": false,
-                    "$$hashKey": "object:53"
                 },
                 {
                     "title": "twitter",
@@ -88,7 +85,6 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "time": "Developed in 2015",
                     "iscs": "",
                     "isImg": false,
-                    "$$hashKey": "object:54"
                 },
                 {
                     "title": "rshell",
@@ -99,7 +95,6 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "time": "Developed in 2014",
                     "iscs": "",
                     "isImg": false,
-                    "$$hashKey": "object:55"
                 }
             ]
         };
@@ -118,7 +113,6 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "time": "Developed in 2015",
                     "iscs": "",
                     "isImg": false,
-                    "$$hashKey": "object:67"
                 },
                 {
                     "title": "git-game-v2",
@@ -129,7 +123,6 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "time": "Developed in 2015",
                     "iscs": "",
                     "isImg": false,
-                    "$$hashKey": "object:68"
                 },
                 {
                     "title": "git-game",
@@ -140,7 +133,6 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "time": "Developed in 2014",
                     "iscs": "",
                     "isImg": false,
-                    "$$hashKey": "object:69"
                 },
                 {
                     "title": "Adventures of Brady",
@@ -151,7 +143,6 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "time": "Developed in 2013",
                     "iscs": "",
                     "isImg": false,
-                    "$$hashKey": "object:70"
                 },
                 {
                     "title": "Hangman (windows terminal)",
@@ -161,7 +152,6 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "summary": "A terminal based hang man game.",
                     "time": "Developed in 2013",
                     "isImg": false,
-                    "$$hashKey": "object:71"
                 },
                 {
                     "title": "Platform",
@@ -172,10 +162,11 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                     "time": "Developed in 2010",
                     "iscs": "",
                     "isImg": false,
-                    "$$hashKey": "object:72"
                 }
             ]
         };
+
+
 
         $scope.types =
             [
@@ -183,6 +174,50 @@ angular.module('myApp.projects', ['ngRoute', 'ui.bootstrap'])
                 software,
                 games
             ];
+
+
+        $scope.goto = function (id) {
+            console.log("ID:"+id);
+            var docel = document.getElementById(id);
+            console.log(docel);
+            var section = angular.element(docel);
+            console.log(section);
+            if (!helper.isEmpty(section)){
+                console.log("GOING TO SECTION");
+                $document.scrollTo(section, 50, 1000);
+            }
+        };
+        $document.ready(function(){
+            var slide = helper.getRouteParam("slide");
+            if (slide) {
+                var id= helper.getRouteParam("id");
+                helper.goto(id);
+
+                // $scope.goto(id);
+                var found = false;
+                for (var typePos in $scope.types) {
+                    if (found)
+                        break;
+                    for (var p in $scope.types[typePos].projects) {
+                        if ($scope.types[typePos].projects[p].title == slide) {
+                            found = true;
+
+                            $scope.types[typePos].active = parseInt(p, 10);
+                            break;
+                        }
+                    }
+                }
+
+            }
+        });
+
+        // function moveDown(){
+
+        // }
+
+
+
+
     })
 
 

@@ -53,13 +53,13 @@ angular.module('myApp.header', ['ngRoute', 'ui.bootstrap', 'duScroll'])
 
         ////---------------------- local functions ----------------------------------///
 
-        var isEmpty = function (obj) {
-            for (var key in obj) {
-                if (obj.hasOwnProperty(key))
-                    return false;
-            }
-            return true;
-        };
+        // var isEmpty = function (obj) {
+        //     for (var key in obj) {
+        //         if (obj.hasOwnProperty(key))
+        //             return false;
+        //     }
+        //     return true;
+        // };
 
         ////---------------------- Scope functions ----------------------------------///
 
@@ -70,9 +70,10 @@ angular.module('myApp.header', ['ngRoute', 'ui.bootstrap', 'duScroll'])
         //     // $scope.navbar.dropdown = !$scope.navbar.dropdown;
         // }
 
+
         $scope.UpdatePageIndex = function () {
 
-            if (!isEmpty(titles[$location.path()])) {
+            if (!helper.isEmpty(titles[$location.path()])) {
                 // console.log("found position " + titles[$location.path()]);
                 $rootScope.pageTitle = titles[$location.path()];
             }
@@ -83,10 +84,10 @@ angular.module('myApp.header', ['ngRoute', 'ui.bootstrap', 'duScroll'])
                     $scope.selectedIndex = pos;
                 }
             }
-
-            if ($routeParams.id) {
+            $document.ready(function(){
                 $scope.goto($routeParams.id);
-            }
+            });
+
         };
 
 
@@ -108,7 +109,7 @@ angular.module('myApp.header', ['ngRoute', 'ui.bootstrap', 'duScroll'])
 
         $scope.goto = function (id) {
             var section = angular.element(document.getElementById(id));
-            if (!isEmpty(section))
+            if (!helper.isEmpty(section))
                 $document.scrollTo(section, 50, 1000);
         };
 
