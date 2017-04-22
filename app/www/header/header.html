@@ -5,7 +5,10 @@
             <p style="margin-bottom:0px;" class="navbar-brand" ng-click="updatePage(0)">Program Henry</p>
             <button type="button" class="navbar-toggle" ng-click="navbar.isNavCollapsed = !navbar.isNavCollapsed"
                     style="color: white; background-color: rgba(255,255,255,.2);">
-                Menu <i class="fa fa-bars"></i>
+                <span ng-repeat="page in navPages track by $index" ng-show="selectedIndex == $index">
+                    {{page.name}}
+                </span>
+                <i class="fa fa-bars"></i>
             </button>
         </div>
 

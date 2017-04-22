@@ -2,12 +2,12 @@
 
 angular.module('myApp.header', ['ngRoute', 'ui.bootstrap', 'duScroll'])
 
-// .config(['$routeProvider', function ($routeProvider) {
-//     $routeProvider.when('/main', {
-//         templateUrl: 'www/main/main.html',
-//         controller: 'MainCtrl'
-//     });
-// }])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/404', {
+            templateUrl: 'www/templates/404.html',
+            controller: 'HeaderCtrl'
+        });
+    }])
 
     .controller('HeaderCtrl', function ($scope, $rootScope, $location, $log, helper, $window, $document, $routeParams) {
 
@@ -84,7 +84,7 @@ angular.module('myApp.header', ['ngRoute', 'ui.bootstrap', 'duScroll'])
                     $scope.selectedIndex = pos;
                 }
             }
-            $document.ready(function(){
+            $document.ready(function () {
                 $scope.goto($routeParams.id);
             });
 

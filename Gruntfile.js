@@ -91,6 +91,16 @@ module.exports = function (grunt) {
                 }
             }
         },
+        uglify:{
+            css: {
+                src: ['app/www/assets/*.css'],
+                dest: 'app/www/assets/min/app.css'
+            },
+            js: {
+                src: ['app/www/assets/*.js'],
+                dest: 'app/www/assets/min/app.js'
+            }
+        },
         watch: {
             files: ['app/www/**/*.*'],
             tasks: ['shell:prepare']
@@ -105,11 +115,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-bowercopy');
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
     // grunt.registerTask('myLess', ['less:development']);
     // grunt.registerTask('test', ['clean', 'myLess', 'bowercopy']);
     // By default, lint and run all tests.
-    grunt.registerTask('default', ['jshint','clean', 'bowercopy']);
+    grunt.registerTask('default', ['jshint','clean', 'bowercopy','uglify']);
 };
